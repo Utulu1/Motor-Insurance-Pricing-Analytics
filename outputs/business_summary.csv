@@ -1,0 +1,7 @@
+Metric,Value
+Average Actual Claim Frequency,0.053399
+Average Predicted Claim Frequency,0.053112
+Mean Absolute Error,0.098922
+Root Mean Squared Error,0.237386
+Mean Poisson Deviance,0.32153
+Mean Residual,0.000286
