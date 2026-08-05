@@ -713,4 +713,4 @@ If you found this project useful or would like to discuss actuarial modelling, i
 
 This project is licensed under the **MIT License**.
 
-See the `LICENSE` file for further information.
+See the [LICENSE](LICENSE) file for further information.
