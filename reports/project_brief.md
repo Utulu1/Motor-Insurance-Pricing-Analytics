@@ -1,59 +1,99 @@
-# Motor Insurance Pricing Analytics
+# Project Brief
 
-## Project Overview
+## Project Title
 
-This project demonstrates an end-to-end motor insurance pricing workflow using Python. The objective is to analyse policyholder and claims data to estimate expected losses and recommend fair, data-driven insurance premiums.
+Motor Insurance Pricing Analytics: Claim Frequency Modelling Using a Poisson Generalized Linear Model (GLM)
 
-The project follows a typical actuarial pricing process, including data preparation, exploratory data analysis, claim frequency modelling, claim severity modelling, expected loss estimation, and premium calculation.
+---
+
+## Background
+
+Accurate estimation of claim frequency is fundamental to actuarial pricing, underwriting and portfolio risk management. Insurers rely on historical policy and claims data to understand the factors influencing claim occurrence and to estimate expected claim frequencies for different policyholders.
+
+This project demonstrates an end-to-end actuarial pricing workflow using a Poisson Generalized Linear Model (GLM) to model motor insurance claim frequency. The analysis combines statistical modelling with business interpretation to produce insights that support evidence-based pricing decisions.
 
 ---
 
 ## Business Problem
 
-Insurance companies must set premiums that are competitive while remaining profitable. Charging premiums that are too low can lead to underwriting losses, while charging excessively high premiums may result in losing customers.
+Insurance companies require reliable estimates of expected claim frequency to:
 
-This project aims to develop a pricing framework that estimates the expected cost of claims based on customer and vehicle characteristics.
+- Develop fair and sustainable insurance premiums.
+- Identify key risk factors influencing claim occurrence.
+- Improve underwriting decisions.
+- Support portfolio profitability.
+- Enhance pricing transparency.
 
----
-
-## Business Objectives
-
-- Understand the characteristics of the insured portfolio.
-- Identify key drivers of claim frequency and claim severity.
-- Estimate expected claim costs.
-- Recommend risk-based insurance premiums.
-- Produce business insights supported by data visualisations.
+Without robust statistical models, pricing decisions may underestimate or overestimate future claims, resulting in financial losses or reduced market competitiveness.
 
 ---
 
-## Expected Deliverables
+## Project Objectives
 
-- Clean and validated dataset
+The objectives of this project were to:
+
+- Perform a comprehensive assessment of data quality.
+- Prepare and validate the modelling dataset.
+- Explore relationships between policy characteristics and claim frequency.
+- Develop a Poisson Generalized Linear Model (GLM).
+- Evaluate model performance using appropriate statistical metrics.
+- Interpret the business implications of the modelling results.
+- Produce a reproducible actuarial analytics workflow suitable for portfolio demonstration.
+
+---
+
+## Dataset
+
+The project uses the publicly available French Motor Third-Party Liability (freMTPL2) insurance dataset, which contains motor insurance policy information together with claim frequency data.
+
+The dataset includes policyholder characteristics, exposure information and claim counts required for frequency modelling.
+
+---
+
+## Scope
+
+The project focuses exclusively on claim frequency modelling.
+
+Claim severity modelling, premium calculation and reserving techniques fall outside the scope of this analysis.
+
+---
+
+## Deliverables
+
+The completed project includes:
+
+- Data quality assessment
+- Data dictionary
+- Business assumptions
 - Exploratory data analysis
-- Risk factor analysis
-- Claim frequency analysis
-- Claim severity analysis
-- Expected loss model
-- Premium recommendations
-- Professional visualisations
-- Business report
-- GitHub-ready documentation
+- Feature engineering
+- Poisson GLM development
+- Model validation
+- Residual diagnostics
+- Business conclusions and recommendations
+- Technical documentation
+- Professional GitHub repository
 
 ---
 
-## Technologies
+## Expected Business Value
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-learn
-- Statsmodels
-- Jupyter Notebook
-- Git & GitHub
+The completed workflow demonstrates how actuarial modelling can transform historical insurance data into pricing insights that support underwriting, portfolio management and evidence-based decision-making.
 
 ---
 
-## Project Status
+## Success Criteria
 
-Planning Phase
+The project is considered successful if it:
+
+- Produces an interpretable claim frequency model.
+- Achieves reasonable predictive performance.
+- Demonstrates sound actuarial modelling practice.
+- Documents the analytical process clearly.
+- Communicates findings in a business-focused manner suitable for actuarial and analytics stakeholders.
+
+---
+
+## Conclusion
+
+This project delivers a complete actuarial pricing analytics workflow, demonstrating the application of statistical modelling, data validation and business interpretation to a real-world motor insurance pricing problem. The repository has been designed to showcase both technical capability and professional analytical communication.

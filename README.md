@@ -274,39 +274,13 @@ Validation included:
 
 # Workflow Diagram
 
-```
-Raw Insurance Data
-        │
-        ▼
-Data Quality Assessment
-        │
-        ▼
-Exploratory Data Analysis
-        │
-        ▼
-Feature Engineering
-        │
-        ▼
-Baseline Poisson GLM
-        │
-        ▼
-Enhanced Poisson GLM
-        │
-        ▼
-Model Comparison
-        │
-        ▼
-Prediction on Test Dataset
-        │
-        ▼
-Performance Evaluation
-        │
-        ▼
-Residual Diagnostics
-        │
-        ▼
-Business Recommendations
-```
+<p align="center">
+  <img src="./assets/workflow_diagram.png"
+       alt="Motor Insurance Analytics Workflow"
+       width="100%">
+</p>
+
+The project followed a structured actuarial pricing workflow, progressing from business understanding and data auditing through feature engineering, Poisson GLM modelling, validation and business interpretation to support evidence-based pricing decisions.
 
 ---
 
@@ -334,10 +308,9 @@ Motor insurance claim frequency represents count data. Consequently, a **Poisson
 
 The expected claim frequency is modelled as:
 
-\[
-\log(\mu_i)=X_i\beta+\log(Exposure_i)
-\]
+Expected Claim Frequency
 
+log(μ) = Xβ + log(Exposure Offset)
 where:
 
 - **μ** = expected claim frequency
@@ -373,14 +346,15 @@ The enhanced Poisson Generalized Linear Model demonstrated improved predictive p
 
 ## Model Comparison
 
-| Performance Metric | Baseline GLM | Enhanced GLM | Outcome |
-|--------------------|-------------:|-------------:|---------|
-| Log-Likelihood | -114,544 | **-114,420** | ✅ Improved |
-| Deviance | 173,695 | **173,446** | ✅ Lower is better |
-| Pearson Chi-Square | 1,422,605 | **1,392,757** | ✅ Improved |
-| Calibration | Good | **Excellent** | ✅ Improved |
+The enhanced Poisson Generalized Linear Model was compared with the baseline model using standard GLM goodness-of-fit statistics. Following feature engineering, the enhanced model demonstrated consistent improvements across all major model diagnostics, indicating a better overall fit while maintaining interpretability.
 
-The enhanced model consistently outperformed the baseline model across all major goodness-of-fit measures, demonstrating that feature engineering added meaningful predictive value without sacrificing interpretability.
+<p align="center">
+    <img src="./assets/model_comparison.png"
+         alt="Baseline vs Enhanced Poisson GLM Comparison"
+         width="100%">
+</p>
+
+The engineered actuarial rating factors—including driver age groups, vehicle age groups and density categories—improved model fit by reducing model information criteria and residual deviance while increasing the log-likelihood. These improvements support the suitability of the enhanced model for actuarial pricing and underwriting applications.
 
 ---
 
@@ -397,7 +371,7 @@ The enhanced model was evaluated on an unseen testing dataset to assess its abil
 | Mean Poisson Deviance | **0.3215** |
 | Mean Residual | **0.0003** |
 
-The difference between the observed and predicted average claim frequencies is less than **1%**, indicating excellent overall calibration.
+The predicted average claim frequency (0.0531) closely matches the observed average claim frequency (0.0534), indicating excellent overall calibration.
 
 ---
 
@@ -480,24 +454,25 @@ Its transparent coefficient estimates make it particularly suitable for regulate
 
 ---
 
-# Visualisations
+## Visualisations
 
-The repository includes a range of exploratory and model validation visualisations.
+### Actual vs Predicted Claim Frequency
 
-## Figure 1 – Average Actual vs Predicted Claim Frequency
+<p align="center">
+<img src="./visualizations/actual_vs_predicted_claim_frequency.png" width="90%">
+</p>
 
-> *The enhanced GLM predicts the portfolio claim frequency with excellent overall calibration.*
-
-![Actual vs Predicted Claim Frequency](visualizations/actual_vs_predicted_claim_frequency.png)
+The enhanced Poisson GLM produces predictions that closely follow the observed claim frequency, indicating good calibration across the test dataset.
 
 ---
 
-## Figure 2 – Residual Distribution
+### Residual Distribution
 
-> *Residuals are centred close to zero, indicating minimal systematic prediction bias.*
+<p align="center">
+<img src="./visualizations/residual_distribution.png" width="90%">
+</p>
 
-![Residual Distribution](visualizations/residual_distribution.png)
-
+The residual distribution is centred around zero, suggesting that prediction errors are approximately unbiased and that the model captures the underlying claim frequency structure effectively.
 ---
 
 ## Exploratory Analysis
@@ -609,7 +584,10 @@ These limitations provide opportunities for future model development rather than
 
 ```text
 Motor-Insurance-Pricing-Analytics/
-│
+├── assets/
+│   ├── motor_insurance_banner_v2.png
+│   ├── workflow_diagram.png
+│   └── model_comparison.png
 ├── data/
 │   ├── freMTPL2freq.csv
 │   └── freMTPL2sev.csv
@@ -719,11 +697,13 @@ Beyond the statistical results, the project demonstrates the ability to translat
 
 *Transforming Data into Better Decisions*
 
-📧 **Email:** utulu.an@gmail.com
+📧 Email: <utulu.an@gmail.com>
 
-💼 **LinkedIn:** https://www.linkedin.com/in/utulu-an
+💼 LinkedIn:
+https://www.linkedin.com/in/utulu-an
 
-💻 **GitHub:** https://github.com/Utulu1
+💻 GitHub:
+https://github.com/Utulu1
 
 If you found this project useful or would like to discuss actuarial modelling, insurance analytics or business analytics, feel free to connect with me on LinkedIn.
 

@@ -78,8 +78,8 @@ Key findings include:
 
 # Conclusion
 
-# Conclusion
+The frequency dataset passed the initial data quality assessment and was considered suitable for motor insurance claim frequency modelling.
 
-The datasets passed the initial data quality assessment and are considered suitable for actuarial pricing analysis.
+No critical issues relating to data completeness, structure or variable types were identified. During data preparation, particular attention was given to duplicate claim records, exposure values exceeding one year, and unusually large claim observations to ensure the dataset was suitable for modelling.
 
-Only minor data preparation is anticipated before modelling. Particular attention will be given to duplicate claim records, exposure values greater than one year, and the treatment of large claim amounts during exploratory data analysis.
+Following data validation, cleaning and feature preparation, the final dataset was considered reliable for exploratory analysis, Poisson Generalized Linear Model (GLM) development, model validation and business interpretation.
