@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="assets/motor_insurance_banner.png" alt="Motor Insurance Pricing Analytics Banner" width="100%">
+  <img src="./assets/motor_insurance_banner_v2.png"
+       alt="Motor Insurance Pricing Analytics Banner"
+       width="100%">
 </p>
 
 ---
